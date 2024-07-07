@@ -1,5 +1,0 @@
-1.PAX LOGIN
-  URL = https://ppn.paxengine.com/
-  user_name = ganzorig.b@grapecity.mn
-  password = fiQZRCW1Aiq8J1Yg8
-2.

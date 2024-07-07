@@ -1,0 +1,100 @@
+1.PAX LOGIN
+  URL = https://ppn.paxengine.com/
+  user_name = ganzorig.b@grapecity.mn
+  password = fiQZRCW1Aiq8J1Yg8
+
+2.
+  TDB TEST HOST = 202.131.226.85:16090
+  TDB TERMINAL NO  = 95000046
+  TDB TERMINAL NO2 = 95000047
+  TDB MASTER KEY = 4230043F5F5FAB4DAD1F474B15861609
+  TDB MASTER KEY CHECK VALUE = 295543
+  STATE TEST HOST = 202.131.225.148:6101
+  STATE TERMINAL NO = 99000009
+  STATE MASTER KEY = 4F67F4E9CD079D0DB96BC1DAF2DFE338
+  ARIG  MASTER KEY = 73D6DAC14932AE072C92763B5EC42354
+  ARIG  CHECK VALUE = 12E30A
+  TRANS MASTER KEY = D9E61FCBF2AE7001B54FE95BDAD513F2
+  TRANS CHECK VALUE = 3FEEE0
+  TRANS TERMINAL NO = 37100008
+  BOGD TERMINAL NO = 37100001
+  BOGD MASTER KEY = 7A3258522568190BC79B582502F48697
+  NEGDI MASTER KEY = B0F28CD9FEBF1F575D895791C70B2A4C
+  NEGDI CHECK VALUE = FAE74E
+3. 
+DOCKER HUB 
+aidgrapecity  
+UBMongolia1234
+
+
+ssh root@192.168.128.11
+UBMongolia2023
+
+ssh mngc-ai@172.16.116.136
+UBMongolia1234
+
+
+ssh gcm\ai@172.16.116.169
+UBMongolia1234$
+
+
+ssh gcm@172.16.116.185
+UBMongolia1234
+
+ssh gcm@172.16.116.186
+UBMongolia1234
+
+
+# state рүү өгөх
+docker login -u state-docker-guest repo.grapecity.mn:8443 # guest user pass оруулах
+# image татах
+docker pull repo.grapecity.mn:8443/state_ai_engine:1.0.1
+
+
+#WSL CONFIG
+[wsl2]
+guiApplications=false
+memory=3GB
+processors=0.5
+
+
+NVIDIA WINDOWS
+1. Enable Windows Subsystem for Linux (WSL):
+dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
+
+2. Enable Virtual Machine Platform:
+dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+
+3. Install WSL
+wsl --install
+4. Set Default Version:
+wsl --set-default-version 2
+5.List Available Linux Distributions
+wsl --list --online
+6.Install Ubuntu 22.04
+wsl --install -d Ubuntu-22.04
+
+7. Update Package Index
+sudo apt update
+8. Upgrade Installed Packages
+sudo apt full-upgrade -y
+
+9.Download the CUDA keyring package
+wget https://developer.download.nvidia.com/compute/cuda/repos/wsl-ubuntu/x86_64/cuda-keyring_1.0-1_all.deb
+10. Install the CUDA keyring package:
+sudo dpkg -i cuda-keyring_1.0-1_all.deb
+11.Update Package Index
+sudo apt-get update
+12.Install CUDA Toolkit
+sudo apt-get -y install cuda
+13. SET PATH
+export PATH=/usr/local/cuda-11.8/bin${PATH:+:${PATH}}
+14. CHECK NVIDIA Driver
+nvidia-smi
+15. CHECK CUDA COMPILER 
+nvcc -V
+
+16.INSTALL RAPIDS 
+pip install \
+    --extra-index-url=https://pypi.nvidia.com \
+    cudf-cu11==24.6.*
