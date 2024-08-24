@@ -21,16 +21,17 @@
   BOGD MASTER KEY = 7A3258522568190BC79B582502F48697
   NEGDI MASTER KEY = B0F28CD9FEBF1F575D895791C70B2A4C
   NEGDI CHECK VALUE = FAE74E
+  HAS TERMINAL = 44579285
 3. 
 DOCKER HUB 
 aidgrapecity  
 UBMongolia1234
 
 
-ssh root@192.168.128.11
+ssh root@192.168.128.11    MOST
 UBMongolia2023
 
-ssh mngc-ai@172.16.116.136
+ssh mngc-ai@172.16.116.136   http://202.131.242.158:8000/
 UBMongolia1234
 
 
@@ -98,3 +99,46 @@ nvcc -V
 pip install \
     --extra-index-url=https://pypi.nvidia.com \
     cudf-cu11==24.6.*
+
+
+
+
+    ORACLE LOGIN
+    sqlplus NES_4043/gcm@172.16.116.8:1521/nes
+
+    ORACLE CONSOLE CLEAR
+    HOST CLS
+
+
+ #remove docker compose temp file
+ rm /var/tmp/docker-compose.yaml.swp
+
+
+
+ pytorch 
+
+
+ pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+ 
+
+
+ INSTALL OPENSSH SERVER ON WINDOWS
+
+OPEN TERMINAL AS ADMIN
+ Add-WindowsCapability -Online -Name OpenSSH.Server
+
+SSH SERVICE to start automatically when the system boots
+Set-Service -Name sshd -StartupType 'Automatic'
+
+SSH SERVICE to start
+Start-Service sshd
+
+SSH SERVICE status
+Get-Service sshd
+
+
+https://hashes.com/en/tools/hash_identifier
+
+
+
+usercreate -env 1000 -id munkhjin.b -pass 1234 -dburl 172.16.116.45:1521/gcmprod -dbuser nes_prod -dbpass dsdd 
