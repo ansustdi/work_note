@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "POS.md",
+                "file": "PASSWORDS.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "POS"
+              "title": "PASSWORDS"
             }
           }
         ]
@@ -185,6 +185,8 @@
   },
   "active": "70218fb5772f52b3",
   "lastOpenFiles": [
+    "WORK.txt",
+    "POS.md",
     "PASSWORDS.md",
     "ORACLE.md",
     "DOCKER.md",
@@ -196,7 +198,6 @@
     "CSES PROBLEM/01 Weird Algorithm.md",
     "CSES PROBLEM/02 Missing Number.md",
     "CSES PROBLEM/03 Repetitions.md",
-    "POS.md",
     "README.md",
     "Marble/25.html",
     "Marble/25_clickhouse.html",
