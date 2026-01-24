@@ -80,3 +80,65 @@ UBMongolia1234
 ```bash
 319fe0b02870d23740a8af39542c3c6d9fb2e6611d8d619692eab5f9b6c4d724
 ```
+
+
+### airbyte windows user
+```
+ganzorig.b@grapecity.mn
+```
+### airbyte windows password
+```bash 
+UY6ZQkce7VJFhGTvi2nqN73aC6QMSeTd
+```
+
+
+
+### nexus 
+```bash 
+172.16.116.24:8082/jboss 8.0.6
+172.16.116.24:8082/oracle-19 0.0.1-clean
+172.16.116.24:8082/jboss 7.4.20
+172.16.116.24:8082/jboss 6.4.24
+```
+
+### nexus docker login
+```bash 
+docker login 172.16.116.24:8082
+```
+
+### nexus docker username
+```bash 
+docker-admin
+```
+
+### nexus docker password
+```bash 
+UBMongolia1234
+```
+
+### Docker Desktop => Settings => Docker Engine 
+```bash 
+{ "ipv6": false, "insecure-registries": ["172.16.116.24:8082"] }
+```
+
+### docker pull jboss 8
+```bash 
+docker pull 172.16.116.24:8082/jboss:8.0.6
+
+```
+### docker pull jboss 7 
+```
+docker pull 172.16.116.24:8082/jboss:7.4.20
+
+```
+
+### docker pull jboss 6 
+```bash 
+docker pull 172.16.116.24:8082/jboss:6.4.24
+```
+
+### docker pull oracle 19
+```bash 
+docker pull 172.16.116.24:8082/oracle-19:0.0.1-clean
+
+```
