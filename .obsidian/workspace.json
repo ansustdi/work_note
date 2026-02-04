@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Kafka/kafka-connectors.md",
+                "file": "UvaOnlineJudge/0 -Problem list.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "kafka-connectors"
+              "title": "0 -Problem list"
             }
           }
         ]
@@ -78,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 261.5110321044922
   },
   "right": {
     "id": "42ce6bcde82e629b",
@@ -185,24 +185,30 @@
   },
   "active": "c2032782adf54996",
   "lastOpenFiles": [
+    "UvaOnlineJudge/100 - The 3n + 1 problem.md",
+    "UvaOnlineJudge/0 -Problem list.md",
+    "CSES PROBLEM/00 Problem List.md",
     "PASSWORDS.md",
+    "UvaOnlineJudge",
     "ORACLE.md",
-    "DOCKER.md",
+    "Clickhouse/sql.md",
     "Clickhouse test.md",
-    "Kafka/kafka-connectors.md",
+    "Clickhouse",
+    "Docker/command.md",
     "Pass/GCM.md",
+    "RealTime Factor/Report.md",
+    "RealTime Factor/notes.md",
+    "RealTime Factor/clickhouse mv test.md",
+    "DOCKER.md",
+    "Docker/JBoss Docker.md",
+    "Kafka/kafka-connectors.md",
     "Kafka",
     "POS.md",
     "Segment/Clickhouse query.md",
-    "RealTime Factor/clickhouse mv test.md",
-    "RealTime Factor/notes.md",
-    "RealTime Factor/Report.md",
     "JAVA/Commands.md",
-    "Docker/JBoss Docker.md",
     "Pass",
     "Segment",
     "CSES PROBLEM/05 Permutations.md",
-    "CSES PROBLEM/00 Problem List.md",
     "Docker/Jboss Devs.md",
     "CSES PROBLEM/01 Weird Algorithm.md",
     "Docker",
@@ -213,15 +219,9 @@
     "RealTime Factor/25.html",
     "Marble/25_clickhouse.html",
     "RealTime Factor/1k.html",
-    "RealTime Factor/5k.html",
-    "RealTime Factor/3k.html",
     "CSES PROBLEM/04 Increasing Array.md",
     "Weird Algorithm.md",
-    "CSES PROBLEM.md",
-    "Untitled 1.md",
     "Pasted image 20251222085436.png",
-    "PAX LOGIN.md",
-    "create a link.md",
     "Untitled 1.canvas",
     "Untitled.canvas"
   ]
