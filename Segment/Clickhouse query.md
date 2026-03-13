@@ -183,3 +183,89 @@ GROUP BY
     oper_code,
     period;
 ```
+
+```sql 
+-- Source table
+CREATE TABLE acnt_seg.seg_txn
+(
+    `cust_code`    String,
+    `acnt_code`    String,
+    `txn_datetime` DateTime,
+    `txn_amt`      Decimal(38, 10),
+    `is_credit`    UInt8,
+    `oper_code`    String,
+    `sign`         Int8  -- 1 = insert, -1 = cancel/delete
+)
+ENGINE = CollapsingMergeTree(sign)
+PARTITION BY toYYYYMM(txn_datetime)
+ORDER BY (cust_code, acnt_code, txn_datetime);
+
+```
+```sql 
+CREATE TABLE acnt_seg.seg_txn_daily_metrics
+(
+    `cust_code`          String,
+    `acnt_code`          String,
+    `txn_date`           Date,        -- partition + group by day
+    `oper_code`          String,
+    `credit_txn_amt_sum` AggregateFunction(sumIf, Decimal(38, 10), UInt8),
+    `debit_txn_amt_sum`  AggregateFunction(sumIf, Decimal(38, 10), UInt8),
+    `credit_txn_count`   AggregateFunction(countIf, UInt8),
+    `debit_txn_count`    AggregateFunction(countIf, UInt8)
+)
+ENGINE = AggregatingMergeTree()
+PARTITION BY toYYYYMM(txn_date)
+ORDER BY (cust_code, acnt_code, oper_code, txn_date);
+```
+```sql 
+CREATE MATERIALIZED VIEW acnt_seg.mv_seg_daily_metrics  
+TO acnt_seg.seg_txn_daily_metrics  
+AS  
+SELECT  
+    cust_code,  
+    acnt_code,  
+    toDate(txn_datetime)                              AS txn_date,  
+    oper_code,  
+    -- multiply by sign to cancel out -1 rows  
+    sumIfState(txn_amt * sign, is_credit = 1)         AS credit_txn_amt_sum,  
+    sumIfState(txn_amt * sign, is_credit = 0)         AS debit_txn_amt_sum,  
+    countIfState(is_credit = 1)                       AS credit_txn_count,  
+    countIfState(is_credit = 0)                       AS debit_txn_count  
+FROM acnt_seg.seg_txn  
+GROUP BY cust_code, acnt_code, oper_code, txn_date;
+```
+```sql 
+SELECT  
+    cust_code,  
+    acnt_code,  
+    oper_code,  
+    sumIfMerge(credit_txn_amt_sum) AS total_credit,  
+    sumIfMerge(debit_txn_amt_sum) AS total_debit,  
+    countIfMerge(credit_txn_count) AS credit_count,  
+    countIfMerge(debit_txn_count) AS debit_count  
+FROM  
+    acnt_seg.seg_txn_daily_metrics  
+WHERE  
+    txn_date >= '2024-03-01'  
+    AND txn_date < '2024-04-01'  
+GROUP BY  
+    cust_code, acnt_code, oper_code;
+```
+
+```sql 
+SELECT  
+    cust_code,  
+    acnt_code,  
+    oper_code,  
+    sumIfMerge(credit_txn_amt_sum) AS total_credit,  
+    sumIfMerge(debit_txn_amt_sum) AS total_debit,  
+    countIfMerge(credit_txn_count) AS credit_count,  
+    countIfMerge(debit_txn_count) AS debit_count  
+FROM  
+    acnt_seg.seg_txn_daily_metrics  
+WHERE  
+    txn_date >= '2024-01-01'  
+    AND txn_date < '2025-01-01'  
+GROUP BY  
+    cust_code, acnt_code, oper_code;
+```

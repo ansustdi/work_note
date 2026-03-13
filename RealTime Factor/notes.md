@@ -14,3 +14,9 @@ $env:DockerComposeJWTKey = "IMPORTANT:_ChangeThisKey_~%pvif3KRo!3Mkm1oMC50TvAPi%
 $env:DockerComposePasswordHashingKey = "IMPORTANT:_ChangeThisKey_~%pvif3KRo!3Mkm1oMC50TvAPi%{mUt<9sBm>DPjGZyfYYWssseVrNUqLQE}mz{L_UsingThisKeyIsDangerous"
 
 ```
+
+### formula
+```java
+IF (LAST_TWO_HOUR_AVG_AMT > ) RETURN 1;  
+ELSE RETURN 0;
+```

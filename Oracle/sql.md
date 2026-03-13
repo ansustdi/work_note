@@ -1,0 +1,20 @@
+### login sqlplus
+```bash 
+sqlplus system/UBMongolia1234@//172.16.116.135:1521/ORCLPDB1
+```
+
+```sql 
+CREATE USER nes_4035 IDENTIFIED BY "gcm" DEFAULT TABLESPACE USERS QUOTA UNLIMITED ON USERS;
+```
+
+```sql 
+GRANT CREATE SESSION TO nes_4035;
+```
+
+```sql 
+GRANT CREATE TABLE, CREATE VIEW, CREATE SEQUENCE, CREATE PROCEDURE TO nes_4035;
+```
+
+```sql 
+GRANT DBA TO nes_4035;
+```

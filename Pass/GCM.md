@@ -52,3 +52,35 @@ docker tag oracle/database:19.3.0-ee aidgrapecity/oracle-database:19.3.0-ee
 ```bash 
 docker push aidgrapecity/oracle-database:19.3.0-ee
 ```
+
+### Passbolt
+```bash 
+#pnUqY8Wga#5cRPLJb#2uD$B3r#
+```
+
+## GCM_GANZORIG
+```bash
+172.16.116.135
+```
+### USER_NAME
+```bash 
+aid
+```
+### Password
+```bash 
+UBMongolia1234
+```
+
+## Most Clickhouse
+### ip
+```bash 
+192.168.127.30
+```
+### User
+```bash 
+root
+```
+### Password
+```bash 
+UBMongolia2026
+```

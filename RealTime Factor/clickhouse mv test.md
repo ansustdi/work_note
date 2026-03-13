@@ -140,3 +140,6 @@ FROM
     system.numbers
 LIMIT 100000000;
 ```
+
+```sql
+```
