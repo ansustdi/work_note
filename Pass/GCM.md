@@ -84,3 +84,72 @@ root
 ```bash 
 UBMongolia2026
 ```
+### CAPITRON NIFI 
+#### user 
+```bash 
+admin
+```
+#### password 
+```bash 
+uqDCMCYDIDicX
+```
+
+## capitron clickhouse 
+```bash 
+192.168.182.6
+```
+### user 
+```bash 
+nifi_user
+```
+### password
+```bash 
+pzXg96x185Lj
+```
+
+### negdi 
+#### ip 
+```bash 
+103.229.177.10
+```
+#### port 
+```bash 
+6720
+```
+
+#### capitron windows pass 
+```bash 
+@dmin202604
+```
+
+### state pam
+```
+grape-ganzorig.b
+```
+### pass
+```
+csTzm6UbRRLp
+```
+
+### state clickhouse admin user 
+```bash 
+cad 
+```
+### state clickhouse admin pass
+```bash 
+WJopXuUEifFMGIt15BcJiZhP10j2
+```
+
+### state vpn
+```bash 
+grape_ganzorig.b
+```
+### pass
+```bash 
+n5M9^44C4+]Z[P
+```
+
+### state vpn address
+```bash
+192.168.20.205
+```

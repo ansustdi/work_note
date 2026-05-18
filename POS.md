@@ -10,7 +10,7 @@
 > | :--- | :--- |
 > | **URL** | [ppn.paxengine.com](https://ppn.paxengine.com/) |
 > | **Username** | `ganzorig.b@grapecity.mn` |
-> | **Password** | `fiQZRCW1Aiq8J1Yg8AZZAA` |
+> | **Password** | `fiQZRCW1Aiq8J1Yg8AZZAAA` |
 
 ---
 
