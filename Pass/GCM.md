@@ -149,7 +149,46 @@ grape_ganzorig.b
 n5M9^44C4+]Z[P
 ```
 
-### state vpn address
+### state pam address
 ```bash
 192.168.20.205
+```
+
+### capitron vpn pass 
+```bash 
+C@pitron123
+```
+
+#### most rac 
+```bash 
+192.168.123.65   most-scan.most.local    most-scan  
+192.168.123.66   most-scan.most.local    most-scan  
+192.168.123.67   most-scan.most.local    most-scan
+```
+
+### ganzorig.b@grapecity pass 
+```bash 
+07lXANbh30gQ
+```
+
+### POLARIS  => 4039
+
+### capitron server 5 admin pass
+```bash 
+@dmin2026
+```
+
+### state ip 
+```bash 
+192.168.27.11
+```
+
+### lab nifi
+```bash 
+https://172.16.116.199:8443/nifi/#/login
+```
+
+### ganzorig.b@grapecity
+```bash 
+$y5cOZKFlMl4BaT#04JyC743PbBHTzgCB#
 ```

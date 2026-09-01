@@ -316,3 +316,11 @@ GROUP BY
 ORDER BY  
     ratio DESC;
 ```
+
+### give permission
+```sql 
+GRANT REMOTE ON *.* TO nifi_user ON CLUSTER cluster_2S_2R;
+GRANT SELECT, INSERT, ALTER, CREATE DATABASE, CREATE TABLE, CREATE VIEW, DROP TABLE, OPTIMIZE, CLUSTER ON *.* TO nifi_user;
+GRANT TABLE ENGINE ON Distributed ON CLUSTER cluster_2S_2R TO nifi_user;  
+GRANT TABLE ENGINE ON ReplicatedMergeTree ON CLUSTER cluster_2S_2R TO nifi_user;
+```
