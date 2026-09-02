@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PASSWORDS.md",
+                "file": "Pass/GCM.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "PASSWORDS"
+              "title": "GCM"
             }
           }
         ]
@@ -187,14 +187,14 @@
   },
   "active": "56d273234eec6b7d",
   "lastOpenFiles": [
-    "Pass/GCM.md",
+    "JBOSS/standalone.md",
     "JBOSS/ear.md",
+    "Pass/GCM.md",
+    "PASSWORDS.md",
     "Docker/JBoss Docker.md",
     "Docker/command.md",
     "Clickhouse/sql.md",
     "POS.md",
-    "PASSWORDS.md",
-    "JBOSS/standalone.md",
     "Kubernetes/Kubernetes.md",
     "Kubernetes",
     "JAVA/Commands.md",
